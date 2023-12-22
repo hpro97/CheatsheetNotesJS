@@ -220,3 +220,38 @@ if (gangsterOGs[z].charAt(0) === "d" || gangsterOGs[z].charAt(2) === "c") {
 //as you can see the power of westside gangster rap can be represented through .charAt(x) to specify a character from an array, first specifying our array with gangsterOGs[z] because we want it for each time the loop runs on an individual OG from our array, followed by .charAt to specify a charadcter (in this case a letter) in each element of our array. remember to tag on (x) to choose which letter,number or sign you want (0), (2), (213). Remember our 0 index so it starts at 0 not 1.
 
 //-------------------------------------------//
+// EXTRAS SECTION //
+//-------------------------------------------//
+
+console.log(gangsterOGs.at(-1)); // will give you "EZ e"
+console.log(gangsterOGs[gangsterOGs.length -1]); // will give you "EZ e"
+
+var harrys = ["harry1" ,"harry2", "harry3" ];
+
+for (const harry of harrys) {
+    console.log ("hello" + harry) };  //called "for if", substitutes the need to write a for loop defining ++1 and length
+
+//else is only used as a final and with no condition, if you provide conditions needs to be else if
+
+//null can be used as a condition in various scenarios
+
+*Seb my G, can you add a 
+
+- basic exmple of an "if statment with ternary opperators" here ?
+
+        with explanations following a similar structure to how ive done it previously for anything new, like the "?"  
+        with a breakdown of how the ternary operators apply to the condition and in which cases theyll be used?
+
+- then a basic exmple of a "while statement" with similar sturcture to previous ?
+        
+        explaining anything new
+        how it works 
+        and point out where "what it does" applies to the code
+
+- then a basic exmple of a "split" with similar sturcture to previous ?
+        
+        explaining anything new
+        how it works 
+        and point out where "what it does" applies to the code
+
+

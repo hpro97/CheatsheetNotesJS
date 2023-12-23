@@ -39,7 +39,7 @@ console.log(watchMeCode + ": a useful snippet of info");
 
 //-------------------------------------------//
 
-var undefine; // No value asigned
+var undefined; // No value asigned
 
 var string = "string";
 

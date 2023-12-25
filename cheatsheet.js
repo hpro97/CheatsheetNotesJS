@@ -526,6 +526,9 @@ console.log(result); // Expected output: "12345"
 
 const cars = [ [ 'Subaru', 'Toyota', 'Buick' ], [ 'Crosstrek', 'Prius', 'Encore' ], [ 2015, 2020, 2012 ] ];
 
+// *Harry's Handy tips for simple pricks
+// various arrays forming an array in this case cars
+
 // Object of Objects
 
 const account = {
@@ -544,6 +547,9 @@ const account = {
         savings: 100000
     }
 };
+
+// *Harry's Handy tips for simple pricks
+// the object being "account" with sub-objects being "user" containing sub-sub-objects, some of those even containin sub-sub-sub objects. and "balance" containing more sub-objects.
 
 // Array of Objects
 
@@ -566,6 +572,11 @@ const planets = [
     }
 ];
 
+// *Harry's Handy tips for simple pricks
+// there's individual objects inside the array of planets
+// these objects are an individual object with (a name value of earth, with a moons value of 1.) you could assign this an object called earthInfor for example.
+// and so forth, until saturn.
+
 // Object of Arrays
 
 const website = {
@@ -573,16 +584,34 @@ const website = {
     pages: [ 'Home', 'About', 'Contact' ]
 };
 
+// *Harry's Handy tips for simple pricks
+// object is website
+// arrays are users and pages
+// users array contains 3 strings, same as pages
+
 // String Object 
 
-const sTxt = "This is a test string";
-const ssTxt = sTxt.substring(0,4);
+const sTxt = "This is a test string"; //we're assigning a string value to an object
+const ssTxt = sTxt.substring(0,4); //this takes "this" from our string and assigns it to ssTxt
+
+console.log(ssTxt); // will read "this"
 
 document.writeln(ssTxt);
 // The JavaScript engine converts the variable to an object, calls the method (substring()), and then reconverts the object back to a primitive variable.
 
+// *Harry's Handy tips for simple pricks
+// this means it takes our ssTxt with a value of "This" and makes it it's own variable assigned a string value of "This"
+
 // JavaScript methods are actions or functions that can be performed on objects.
+
+// *Harry's Handy tips for simple pricks
+// Just like we did a seccy ago with our substring that now has a value of "This"
+
 // We can create our own methods or functions and store them as object properties.
+
+// *Harry's Handy tips for simple pricks
+// for example you could make each word from sTxt a substring like we did on line 595 by putting multiple "const ssTxt = sTxt.substringx(x,x)" together under an umbrella function of "sentenceBreakdownByWord", breaking down each individual work in our parent string "This is a string" via hardcoding each line.
+
 // But Javascript Objects already come with some built in methods for our convenience
 // There are many but here are some useful starting ones.
 
@@ -595,10 +624,10 @@ document.writeln(ssTxt);
 const str = 'The quick brown fox jumps over the lazy dog.';
 
 const words = str.split(' '); // notice the space between the " "
-console.log(words[3]); // returns "fox"
+console.log(words[3]); // returns "fox" // remeber 0 index so this would be the forth word // 0, 1, 2, 3
 
 const chars = str.split(''); // no space between the ""
-console.log(chars[8]); // returns "k"
+console.log(chars[8]); // returns "k" // this also takes into account spaces as characters
 
 const strCopy = str.split(); // no ""
 console.log(strCopy); // returns Array ["The quick brown fox jumps over the lazy dog."]
@@ -616,7 +645,7 @@ const reversed = array1.reverse();
 console.log('reversed:', reversed); // returns reversed: ["three", "two", "one"]
 
 // Careful: reverse is destructive -- it changes the original array.
-console.log('array1:', array1); // returns array1: ["three", "two", "one"]
+console.log('array1:', array1); // returns array1: ["three", "two", "one"] // we've already returned a reverse function on our array, once this happens our new value of the original array is overwritten.
 
 
 // Array.prototype.join()
@@ -628,11 +657,11 @@ console.log('array1:', array1); // returns array1: ["three", "two", "one"]
 
 const elements = ['Fire', 'Air', 'Water'];
 
-console.log(elements.join()); //  returns "Fire,Air,Water"
+console.log(elements.join()); //  returns "Fire,Air,Water" // takes the full array, each individual item with be with commas.
 
-console.log(elements.join('')); // returns "FireAirWater"
+console.log(elements.join('')); // returns "FireAirWater" // remember no space on line 632
 
-console.log(elements.join('-')); // returns "Fire-Air-Water"
+console.log(elements.join('-')); // returns "Fire-Air-Water" // we specified a character "-" to go between each item in the array
 
 //******************************************************************//
 

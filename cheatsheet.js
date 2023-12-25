@@ -251,6 +251,40 @@ if (gangsterOGs[z].charAt(0) === "d" || gangsterOGs[z].charAt(2) === "c") {
 // as you can see the power of westside gangster rap can be represented through .charAt(x) to specify a character from an array, first specifying our array with gangsterOGs[z] 
 // because we want it for each time the loop runs on an individual OG from our array, followed by .charAt to specify a charadcter (in this case a letter) in each element of our array. 
 // remember to tag on (x) to choose which letter,number or sign you want (0), (2), (213). Remember our 0 index so it starts at 0 not 1.
+//-------------------------------------------//
+
+
+
+// Math is a funciton that does a fucktonne of math operations basically
+// heres some examples
+
+console.log (Math.random());
+
+// math.random will pick a random number between 0-1
+
+console.log (Math.round(1.6));
+
+// math.round () will round to nearest whole number, either up or down
+// math.ciel () will round up
+// math.floor () will round down
+
+var colors = ["blue", "red", "green"];
+
+while(true) {
+
+var randomIndex = Math.floor(math.random() * colors.length);
+
+alert(colors[randomIndex]);
+}
+
+// chose floor here because of 0 index, so we get 0,1 or 2
+// so first math.random will pick random number between 0-1
+// times it by colors.length (0,1,2) so 3
+// and rounds it down so that it is between 0-2
+
+// then an alert will do (saved in randomIndex) to corrolate to one of our colors within the 0 index
+// 0 for blue, red for 1, 2 for green
+// the alrt takes affect and reads one of our colors picked at random
 
 //-------------------------------------------//
 // EXTRAS SECTION //

@@ -437,15 +437,64 @@ console.log(result); // Expected output: "12345"
 
 // Examples of Objects: 
 
-// Arrays 
-let array = ["One", "Two"];
+// Array of Arrays
 
-// Object Arrays 
-let objArr = { "Key": "value", "Pet": "Cat" }
+const cars = [ [ 'Subaru', 'Toyota', 'Buick' ], [ 'Crosstrek', 'Prius', 'Encore' ], [ 2015, 2020, 2012 ] ];
+
+// Object of Objects
+
+const account = {
+    user: {
+        firstName: 'John',
+        lastName: 'Doe',
+        password: 'abcdefg',
+        address: {
+            street: '123 First Ave',
+            city: 'Anywhere, USA',
+            zip: 12345
+        }
+    },
+    balance: {
+        checking: 25000,
+        savings: 100000
+    }
+};
+
+// Array of Objects
+
+const planets = [
+    {
+        name: 'Earth',
+        moons: 1
+    },
+    {
+        name: 'Mars',
+        moons: 2
+    },
+    {
+        name: 'Jupiter',
+        moons: 79
+    },
+    {
+        name: 'Saturn',
+        moons: 82
+    }
+];
+
+// Object of Arrays
+
+const website = {
+    users: [ 'John', 'Mary', 'Tom' ],
+    pages: [ 'Home', 'About', 'Contact' ]
+};
 
 // String Object 
 
-let stringObj = "I love JavaScript!"
+const sTxt = "This is a test string";
+const ssTxt = sTxt.substring(0,4);
+
+document.writeln(ssTxt);
+// The JavaScript engine converts the variable to an object, calls the method (substring()), and then reconverts the object back to a primitive variable.
 
 // JavaScript methods are actions or functions that can be performed on objects.
 // We can create our own methods or functions and store them as object properties.

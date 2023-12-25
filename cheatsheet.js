@@ -421,6 +421,7 @@ console.log(!ternary4) // we will return FALSE - ENJOY :)
 // ternary4 = 10 < 9 ? false (this would apply to the truthy statement because it's first)
 // ternary4 = num < 9 ? false : true (this would apply to the falsy statement because it's second) *even though we've assigned different value to apply*
 // our original statement 10 < 9 is falsy so it would apply to the second which is truthy statement, with the value we've assigned, in this case "false"
+
 //**************************************************************************//
 
 // While / do...while loops
@@ -444,6 +445,8 @@ while (x < 3) { // condition
 
 console.log(n); // Expected output: 3
 
+//will go through x[0], x[1], x[2]
+
 // EXAMPLE
 
 let y = 0; // initialization
@@ -454,9 +457,12 @@ while (y < 3) { // condition
     z += y; // CODEBLOCK
 }
 
-// After the first pass: y = 1 and z = 1
-// After the second pass: y = 2 and z = 3
-// After the third pass: y = 3 and z = 6
+// *Harry's Handy tips for simple pricks
+// += adds the value of y onto z
+
+// After the first pass: y = 1 and z = 1 (adds 1 from y onto 0 of Z)
+// After the second pass: y = 2 and z = 3 (adds 2 from y onto 1 of z, so 3)
+// After the third pass: y = 3 and z = 6 (adds 3 from y onto 3 of z, so 6)
 
 console.log(y); // 3
 console.log(z); // 6
@@ -475,7 +481,7 @@ do
 
 // EXAMPLE
 
-let result = '';
+let result = ''; // '' will mean no spaces, added result directly after first result
 let i = 0; // initialization
 
 do {
@@ -485,6 +491,12 @@ do {
 
 console.log(result); // Expected output: "12345"
 
+// *Harry's Handy tips for simple pricks
+// first loop will be 0 + 1 for i , giving result of one, making 1 added to result string
+// second loop will be 1 + 1 for i, giving result of 2, adding 2 to result string, result string is now 12
+// this will loop until the result of i is 5, adding the final 5 onto result string
+// so the string result total will be 12345
+
 // MAIN POINTS
 
 // While loop
@@ -493,7 +505,10 @@ console.log(result); // Expected output: "12345"
 
 // do...while loop
 // Executes statement UNTIL condition === FALSE
-// Condition is evaluated AFTER executing the statement - (statementt will execute atleast once)
+// Condition is evaluated AFTER executing the statement - (statement will execute atleast once)
+
+// *Harry's Handy tips for simple pricks
+// meaning the final entry for i will be 5 adding the final result total of 5, making it 12345, before deciding not to execute again because i has reached 5
 
 //*********************************************************************//
 

@@ -402,7 +402,7 @@ console.log(z); // 6
 do {
     CODE BLOCK
 } while (CONDITION);
-
+ 
 // EXAMPLE
 
 let result = '';

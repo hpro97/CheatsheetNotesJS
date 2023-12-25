@@ -399,9 +399,9 @@ console.log(z); // 6
 
 // PSEUDO
 
-do
-    STATMENT {
-    } WHILE(CONDITION);
+do {
+    CODE BLOCK
+} while (CONDITION);
 
 // EXAMPLE
 
@@ -439,7 +439,7 @@ console.log(result); // Expected output: "12345"
 
 // Array of Arrays
 
-const cars = [ [ 'Subaru', 'Toyota', 'Buick' ], [ 'Crosstrek', 'Prius', 'Encore' ], [ 2015, 2020, 2012 ] ];
+const cars = [['Subaru', 'Toyota', 'Buick'], ['Crosstrek', 'Prius', 'Encore'], [2015, 2020, 2012]];
 
 // Object of Objects
 
@@ -484,16 +484,16 @@ const planets = [
 // Object of Arrays
 
 const website = {
-    users: [ 'John', 'Mary', 'Tom' ],
-    pages: [ 'Home', 'About', 'Contact' ]
+    users: ['John', 'Mary', 'Tom'],
+    pages: ['Home', 'About', 'Contact']
 };
 
 // String Object 
 
 const sTxt = "This is a test string";
-const ssTxt = sTxt.substring(0,4);
+const ssTxt = sTxt.substring(0, 4);
 
-document.writeln(ssTxt);
+console.log(ssTxt); // returns "This"
 // The JavaScript engine converts the variable to an object, calls the method (substring()), and then reconverts the object back to a primitive variable.
 
 // JavaScript methods are actions or functions that can be performed on objects.

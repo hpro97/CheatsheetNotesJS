@@ -280,7 +280,7 @@ for (const harry of harrys) {
 
 // In JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. 
 
-var sebsLengendStatus = true
+var sebsLegendStatus = true
 
 // In this case Seb's LegendStatus is "True"
 
@@ -475,9 +475,9 @@ console.log(z); // 6
 
 // PSEUDO
 
-do
-    STATMENT {
-    } WHILE(CONDITION);
+do { 
+    CODE BLOCK
+} while (CONDITION);
 
 // EXAMPLE
 
@@ -595,8 +595,6 @@ const sTxt = "This is a test string"; //we're assigning a string value to an obj
 const ssTxt = sTxt.substring(0,4); //this takes "this" from our string and assigns it to ssTxt
 
 console.log(ssTxt); // will read "this"
-
-document.writeln(ssTxt);
 // The JavaScript engine converts the variable to an object, calls the method (substring()), and then reconverts the object back to a primitive variable.
 
 // *Harry's Handy tips for simple pricks

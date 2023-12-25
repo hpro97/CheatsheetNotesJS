@@ -421,7 +421,6 @@ console.log(!ternary4) // we will return FALSE - ENJOY :)
 // ternary4 = 10 < 9 ? false (this would apply to the truthy statement because it's first)
 // ternary4 = num < 9 ? false : true (this would apply to the falsy statement because it's second) *even though we've assigned different value to apply*
 // our original statement 10 < 9 is falsy so it would apply to the second which is truthy statement, with the value we've assigned, in this case "false"
-
 //**************************************************************************//
 
 // While / do...while loops

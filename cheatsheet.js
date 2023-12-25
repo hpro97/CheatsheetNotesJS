@@ -1,7 +1,7 @@
 
 //-------------------------------------------//
 
-console.log ("This is the log for the 🔥INLINE🔥 JavaScript");
+console.log("This is the log for the 🔥INLINE🔥 JavaScript");
 
 // logs to console command, between quotations is a string, it's literal.
 
@@ -35,25 +35,29 @@ console.log(watchMeCode);
 
 console.log(watchMeCode + ": a useful snippet of info");
 
-//you can display multiple things at once by addition
+//you can display multiple things at once by concatenation
 
 //-------------------------------------------//
 
-var undefinedHere;
+var undefined; // No value asigned
 
-var stringz = "string";
+var string = "string";
 
 var integerNumber = 666;
 
 var decimalNumber = 69.69;
 
-var boolz = true; // or false
+var boolean = true; // or false
 
-//primitive data: undefined, string, number and boolean
+var nullValue = null; // In other words "no value" - sometimes used when we want to declare a variable but not give it a starting value. 
+// It tells the developer that we have explicltly given the variable no value instead of just being "undefined"
 
-console.log(typeof true); //could be "string", 666 , 69.69 , undefinedHere, stringz, integerNumber, decimalNumber, boolz
+//primitive data types: undefined, string, number, boolean, null. 
 
-// tells ya type of data
+console.log(typeof true); // returns "boolean" - takes this value as a built in value inherent of javascript
+console.log(typeof boolean); // returns "boolean" - takes this value to the assigned  value in line 50
+
+//"typeof" tells ya type of data
 
 //-------------------------------------------//
 
@@ -63,87 +67,114 @@ var c = "10";
 
 //arithmetic operators work with numbers to give single result
 
-console.log(a + b); //110
+console.log(a + b); //110 variable A + variable B in a maths equation because it's a number not a string like C
 
 //can use + , - , / , *
 
 console.log(a % b); // 0
 
-//modulo gives remainder (what's left over after division)
+//modulo gives remainder (what's left over after division) - also a way to find if a number is odd or even ;)
 
-console.log(b == c); // double means not comparing type, so could use for a number and string
-console.log(b != c); // ! means opposite
+// Equality Operator
+console.log(b == c); // double means not comparing type, so could use for a number and string - Under the hood JS converts the data types to check if they are equal value
+// Inequality operator
+console.log(b != c); // "!"" means opposite
 
-console.log(b === c); // triple is strict type, "10" isnt same as 10
-console.log(b !== c); // again ! is opposite
+// Stric Equality Operator
+console.log(b === c); // triple is strict type, "10" isnt same as 10 - does not convert data types
+// Strict Inequality operator
+console.log(b !== c); // again "!"" is opposite
 
+// Greater than Operator
 console.log(a > b); //greater than
+// Less than Operator
 console.log(a < b); // less than
 
+// Greater than or Equal to Operator
 console.log(a <= b); // throw in an equal to or greater than to make things spicy
+// Less than or Equal to Operator
+console.log(a >= b);
 
 //comparisons give true or false
 
-var expression1 = (b == c); // stores true or false in a var
-var expression2 = (a > b); // ditto
+var expression1 = (b == c); // stores true or false in a var. This would be true because they're both 10 even though one's a string and one is a number
+var expression2 = (a > b); // ditto. This would also be true
 
-console.log(expresion1 && expression2); //tells ya if both are true
-console.log(expresion1 || expression2); //or tells you if one of them is true (shift + backslash button to the right of space and alt gr)
-console.log(!expresion1); //again ! makes it inverse
+// Logical AND Operator
+console.log(expression1 && expression2); //and tells ya if both are true. this would be false, becuase we have a "true" and "false" value
+// Logicial OR Operator
+console.log(expression1 || expression2); //or tells you if one of them is true (shift + backslash button to the right of space and alt gr on UK keyboard)
+console.log(!expression1); //again ! makes it inverse. this would be false, because the opposite of the value stored (true)
 
 //-------------------------------------------//
 
-var overWhelmed = 70;
-var WantsToKillSelf = true;
-var javascriptDifficulty = 50;
+var overWhelmed = 70; //stored number value (integer)
+var WantsToKillSelf = true; //stored boolean value
+var javascriptDifficulty = 50; //stored number value (integer)
 
-if (overWhelmed >= 80) //if this var value is bigger than 80 
+if (overWhelmed >= 80) //if this var value is equal or greater than 80 (which it's not)
 //then this happenes
 {
- console.log("jumps off bridge");   
+    console.log("jumps off bridge");
 }
 //if its not bigger than 80 then this happens
 else if //if means you can tag another else on if it doesn't meet 2 requirements
-    (javascriptDifficulty >= 60 && overWhelmed > 40) {
-        console.log("lets do it")
+    (javascriptDifficulty >= 60 && overWhelmed > 40) { //this is true + false (remeber && checks for both to be true)
+    console.log("lets do it") //so this doesn't happen in this case
 }
 else {
     console.log("not today compadre");
 }
-// rember can negae by outting ! between () before the var name
+// rember you can negate by putting ! between () before the var name
 
 //-------------------------------------------//
 
-var names = ["your nan", "my nan", "his aunt"]; // [] for arrays, basically multiple strings stored in a var
+var names = ["your nan", "my nan", "his aunt"]; // [] - basically multiple data entries (in this case of the same type, a string) stored in a variable
 
 console.log(names); //all
 console.log(names[0]); //0 index so 0 is first entry not 1
 
-names[2] = "his nan"; //replaces
+names[2] = "his nan"; //replaces the third entry because 2 is the third number in a 0 index
 
 console.log(names.length); //shows how many items
 
 
 //-------------------------------------------//
 
+for (initialization; condition; afterthought)
+
+////intitialization is the start point (normally 0) 
+//condition (we'll usually put i > "array".length) 
+//afterthought (if moving onto next item in array it will be i++ so goes onto next item each time)
+
+{
+    // CODEBLOCK
+}
+
 for (let index = 0; index < array.length; index++) {
     const element = array[index];
-    
+
+    //following ES6 standards
+
 }
 
 for (var i = 0; i < 5; i++) {
     console.log("value of i: " + i);
 }
 
-//for loops, i = 0 means it starts at bagining of var list, < 5 means loop stops if theres more than 5 entries, i ++ means each time the code were running repeats it adds one each time so in other words moves onto next item in the array
+//Billy basics peasant's way of doing it, like moi (-Harry)
+
+//for loops, i = 0 means it starts at begining (zero index [0])
+//< 5 means loop stops at 4th loop (< 5 is not inclusive)
+//i ++ adds "1" onto "i" meaning the loop moves onto the next "i" or index.
 
 var bbcNonces = ["jimmy saville", "rolph harris", "garry glitter"];
 
 for (var i = 0; i < bbcNonces.length; i++) {
-    console.log ("do not enter a hospital owned by these people: " + bbcNonces[i]);
+    console.log("do not enter a hospital owned by these people: " + bbcNonces[i]);
 };
 
-//in this case last it means each time executed go to next item in the list
+//in this case last i means each time executed go to next item in the list
 
 //-------------------------------------------//
 
@@ -172,14 +203,14 @@ if (colourConversion === 1) //our translation of the promt made into number data
 {
     alert("¡escogiste: rojo, hermano!");
 } else if //if our data input was not one but another number, then checks for this (or in this case 2)
-(colourConversion === 2) {
-    alert ("vi elektis: verda, frato!");
+    (colourConversion === 2) {
+    alert("vi elektis: verda, frato!");
 } else  //anything other than 1 or 2 will be this final statement
 {
-    alert ("du hast keine zahl zwischen eins und zwei gewahlt, bruder!");
+    alert("du hast keine zahl zwischen eins und zwei gewahlt, bruder!");
 }
 
-//now let's convert this into a piece of shit switch statements and break it down hammer time.
+//now let's convert this into a piece of shit switch statement and break it down hammer time.
 
 var sammyBoysNumber = prompt("i've had enough of the motha fockin' var's, in this motha fockin' script! Just put 1 or 2! give me an undefined input again motha fucka, i dare ya, i double dare ya!")
 
@@ -187,14 +218,14 @@ var colorConversion = parseInt(sammyBoysNumber)
 
 switch (colourConversion) { //switch means it'll cycle through these options
     case 1: //in the case the input was 1
-      alert("you picked red, bro"); //you'll get this input
-      break; //means you smash a kitkat into the floppy disc tray because it's hungry and needs to break down the syntax after each command prior to starting a new one, think of break as an "else if"
+        alert("you picked red, bro"); //you'll get this input as an alert
+        break; //means you smash a kitkat into the floppy disc tray because it's hungry and needs to break down the syntax after each command prior to starting a new one, think of break as an "else if" but still needed prior to 
     case 2:
-      alert("you picked green, broseph");
-      break;
-    default: //anything other than our options will give a default think of this as final else
-      alert("he's not the messiah, he's a very naughty boy!"); 
-  }
+        alert("you picked green, broseph");
+        break;
+    default: //anything other than our options will give a default think of this as final else (remember break is still needed even if you're thinking of this as a final "else" statement)
+        alert("he's not the messiah, he's a very naughty boy!");
+}
 
 //-------------------------------------------//
 
@@ -214,44 +245,405 @@ if (gangsterOGs[z].charAt(0) === "d" || gangsterOGs[z].charAt(2) === "c") {
 } else if (gangsterOGs[z].charAt(0) === "c") {
     alert("cent in the house");
 } else {
-    alert ("EZ e turnin' dat shit uppppp!");
+    alert("EZ e turnin' dat shit uppppp!");
 }
 
-//as you can see the power of westside gangster rap can be represented through .charAt(x) to specify a character from an array, first specifying our array with gangsterOGs[z] because we want it for each time the loop runs on an individual OG from our array, followed by .charAt to specify a charadcter (in this case a letter) in each element of our array. remember to tag on (x) to choose which letter,number or sign you want (0), (2), (213). Remember our 0 index so it starts at 0 not 1.
+// as you can see the power of westside gangster rap can be represented through .charAt(x) to specify a character from an array, first specifying our array with gangsterOGs[z] 
+// because we want it for each time the loop runs on an individual OG from our array, followed by .charAt to specify a charadcter (in this case a letter) in each element of our array. 
+// remember to tag on (x) to choose which letter,number or sign you want (0), (2), (213). Remember our 0 index so it starts at 0 not 1.
 
 //-------------------------------------------//
 // EXTRAS SECTION //
 //-------------------------------------------//
 
-console.log(gangsterOGs.at(-1)); // will give you "EZ e"
-console.log(gangsterOGs[gangsterOGs.length -1]); // will give you "EZ e"
+console.log(gangsterOGs.at(-1)); // will give you "EZ e" (-1 will be last on list)
+console.log(gangsterOGs[gangsterOGs.length - 1]); // will give you "EZ e"
 
-var harrys = ["harry1" ,"harry2", "harry3" ];
+var harrys = ["harry1", "harry2", "harry3"];
 
 for (const harry of harrys) {
-    console.log ("hello" + harry) };  //called "for if", substitutes the need to write a for loop defining ++1 and length
+    console.log("hello" + harry)
+};  //called "for...of", substitutes the need to write a for loop defining ++1 and length
 
 //else is only used as a final and with no condition, if you provide conditions needs to be else if
 
 //null can be used as a condition in various scenarios
 
-*Seb my G, can you add a 
 
-- basic exmple of an "if statment with ternary opperators" here ?
+//***********************************************//
 
-        with explanations following a similar structure to how ive done it previously for anything new, like the "?"  
-        with a breakdown of how the ternary operators apply to the condition and in which cases theyll be used?
+//! CAUTION - Beyond this point there is no return
 
-- then a basic exmple of a "while statement" with similar sturcture to previous ?
-        
-        explaining anything new
-        how it works 
-        and point out where "what it does" applies to the code
+//***********************************************//
 
-- then a basic exmple of a "split" with similar sturcture to previous ?
-        
-        explaining anything new
-        how it works 
-        and point out where "what it does" applies to the code
+// Falsy or Truthy concept
+
+// In JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. 
+
+var sebsLengendStatus = true
+
+// In this case Seb's LegendStatus is "True"
+
+// All values are truthy unless they are defined as falsy. That is, all values are truthy except false, 0, -0, 0n, "", null, undefined, NaN, and document.all.
+
+// JavaScript uses type coercion in Boolean contexts.
+
+// This means different data types will be automatically converted for this type of opperation, think of it as 10 == "10", so a string and a number type will be compared with == as opposed to ===
+
+// Example of our assigned var in use with falsy or truthy concept
+
+if (sebsLegendStatus) // Imagine by default there's a true value before () to help visualize what's happening
+
+// Examples of truthy values in JavaScript (which will be coerced to true in boolean contexts, and thus execute the if block):
+
+// These are innate values we havn't defined and are true by default
+
+if (true)
+    if ({})
+        if ([])
+            if (42)
+                if ("0")
+                    if ("false")
+                        if (new Date())
+                            if (-42)
+                                if (12n)
+                                    if (3.14)
+                                        if (-3.14)
+                                            if (Infinity)
+                                                if (-Infinity) // yep...
+
+                                                    // The logical AND operator, &&
+
+                                                    // If the first operand is truthy, the logical AND operator returns the second operand:
+
+                                                    true && "dog"
+                                                    // because we have a true, returns "dog", if it were FALSY, for exmple false && "dog" we'd have no dog "that's ruff" *teardrop*
+
+                                                    [] && "dog"
+                                                    // returns "dog" (reference line 303, we can see this [] is innately true)
 
 
+//**************************************************************************//
+
+// Ternary Operator
+
+// Ternary Operator functions similarly to an if statement where by we give a condition, and if met, executes that BLOCK of code. 
+
+// IF STATEMENT
+if (CONDITION) {
+    CODE BLOCK;
+} else if (CONDITION) {
+    CODE BLOCK;
+} else {
+    CODE BLOCK;
+}
+
+//REFERENCE LINE 111 FOR THIS EXAMPLE
+
+var overWhelmed = 70;
+var WantsToKillSelf = true;
+var javascriptDifficulty = 50;
+
+if (overWhelmed >= 80)
+{
+    console.log("jumps off bridge");
+} else {
+    console.log("not today compadre");
+}
+
+// we could simplify this by writing:
+
+(overWhelmed >=80) ? console.log("jumps off bridge") : console.log("not today compadre");
+
+// remeber we can swap dis shid up but need to change ored because the first ternery operator is for true
+
+if (overWhelmed >= 20) {
+    var imOverwhelmed = true;
+}
+
+(!imOverwhelmed) // esentially stored data is now false
+? // just because we need this for ternery after conditon
+console.log("not today compadre") // will happen under a true scenario (in this case we have false)
+:
+console.log("jumps off bridge") // will happen under a false scenario (like now)
+
+// TERNARY OPERATOR
+CONDITION ? CODE : CODE; // all in one line ;)
+!CONDITION ? CODE : CODE; // Short hand for CONDITION !== TRUE ?
+
+// Ternary opperator is essentially a short hand for if statements - less lines of code
+// If the condition is met, the first code (on the left) is executed otherwise falls to the second code (right side) by default. A little bit like true or false.
+
+CONDITION ? TRUE : FALSE;
+
+// Ternary Operators can also be chained much like if / else if statements
+
+CONDITION ? CODE // like an if statement
+    : CONDITION ? CODE // like an else if
+        : CODE; // like an else - Defaults to last code if previous conditions not met
+
+// EXAMPLES
+
+let num = 10;
+
+let ternary1 = num < 9 ? true : false;
+
+let ternary2 = num < 9 ? "I am less than 9" : "I am more than 9";
+
+console.log(ternary1); // here we will return false 
+
+// *Harry's Handy tips for simple pricks (like myself)* 
+// because the second statement is when the condition is false (or not met, like in this scenario)
+
+console.log(ternary2); // here we will return "I am more than 9"
+
+// *Harry's Handy tips for simple pricks
+// because ternary2 (10 < 9 is false) it will say "i am more than 9" (the value we assigned in the case our statement was false)
+
+let ternary3 = !ternary1 ? true : false; // ternary1 !== false ?
+
+// ternary1 is an assigned false value
+// the opposite of ternary1 (so !ternary1) would be true
+// this statement is essentially saying "our new value, ternary3" will be true, beacuse the opposite of ternary1 (!) is true, so we will assigne true to this new value, because the statment is "TRUTHY"
+
+console.log(ternary3); // we will return true - num is not less than 9 (because our ! on line 403 negates our false value making it true)
+
+// BONUS MINDFUCK
+
+let ternary4 = num < 9 ? false : true; // here we switched around true : false - (false === true & true === false)
+
+console.log(ternary4); // we will return TRUE - even though num < 9 === false - here we are saying false really equals true since the second block of code is the falsy one.
+console.log(!ternary4) // we will return FALSE - ENJOY :)
+
+// *Harry's Handy tips for simple pricks
+// ternary4 = num < 9 ? false : true; 
+// ternary4 = 10 < 9 (would be falsy)
+// ternary4 = 10 < 9 ? false (this would apply to the truthy statement because it's first)
+// ternary4 = num < 9 ? false : true (this would apply to the falsy statement because it's second) *even though we've assigned different value to apply*
+// our original statement 10 < 9 is falsy so it would apply to the second which is truthy statement, with the value we've assigned, in this case "false"
+
+//**************************************************************************//
+
+// While / do...while loops
+
+// The while statement creates a loop that executes a specified statement as long as the test condition evaluates to TRUE. 
+// The condition is evaluated BEFORE executing the statement.
+
+// Traditional for loop
+for (initialization; condition; afterthought) {
+    // CODEBLOCK
+}
+
+// while loop
+
+let x = 0; // initialization
+
+while (x < 3) { // condition
+    x++; // afterthought
+    // CODEBLOCK
+}
+
+console.log(n); // Expected output: 3
+
+// EXAMPLE
+
+let y = 0; // initialization
+let z = 0;
+
+while (y < 3) { // condition
+    y++; // afterthought
+    z += y; // CODEBLOCK
+}
+
+// After the first pass: y = 1 and z = 1
+// After the second pass: y = 2 and z = 3
+// After the third pass: y = 3 and z = 6
+
+console.log(y); // 3
+console.log(z); // 6
+
+
+// do...while loop
+
+// The do...while statement creates a loop that executes a specified statement until the test condition evaluates to FALSE.
+// The condition is evaluated AFTER executing the statement, resulting in the specified statement executing at least once.
+
+// PSEUDO
+
+do
+    STATMENT {
+    } WHILE(CONDITION);
+
+// EXAMPLE
+
+let result = '';
+let i = 0; // initialization
+
+do {
+    i = i + 1; // afterthought
+    result = result + i; // CODEBLOCK
+} while (i < 5); // condition
+
+console.log(result); // Expected output: "12345"
+
+// MAIN POINTS
+
+// While loop
+// Executes statement WHILE condition === TRUE
+// Condition is evaluated BEFORE executing the statement
+
+// do...while loop
+// Executes statement UNTIL condition === FALSE
+// Condition is evaluated AFTER executing the statement - (statementt will execute atleast once)
+
+//*********************************************************************//
+
+//! READY?
+
+//*********************************************************************//
+
+// METHODS
+
+// In JavaScript we have Objects
+
+// Examples of Objects: 
+
+// Array of Arrays
+
+const cars = [ [ 'Subaru', 'Toyota', 'Buick' ], [ 'Crosstrek', 'Prius', 'Encore' ], [ 2015, 2020, 2012 ] ];
+
+// Object of Objects
+
+const account = {
+    user: {
+        firstName: 'John',
+        lastName: 'Doe',
+        password: 'abcdefg',
+        address: {
+            street: '123 First Ave',
+            city: 'Anywhere, USA',
+            zip: 12345
+        }
+    },
+    balance: {
+        checking: 25000,
+        savings: 100000
+    }
+};
+
+// Array of Objects
+
+const planets = [
+    {
+        name: 'Earth',
+        moons: 1
+    },
+    {
+        name: 'Mars',
+        moons: 2
+    },
+    {
+        name: 'Jupiter',
+        moons: 79
+    },
+    {
+        name: 'Saturn',
+        moons: 82
+    }
+];
+
+// Object of Arrays
+
+const website = {
+    users: [ 'John', 'Mary', 'Tom' ],
+    pages: [ 'Home', 'About', 'Contact' ]
+};
+
+// String Object 
+
+const sTxt = "This is a test string";
+const ssTxt = sTxt.substring(0,4);
+
+document.writeln(ssTxt);
+// The JavaScript engine converts the variable to an object, calls the method (substring()), and then reconverts the object back to a primitive variable.
+
+// JavaScript methods are actions or functions that can be performed on objects.
+// We can create our own methods or functions and store them as object properties.
+// But Javascript Objects already come with some built in methods for our convenience
+// There are many but here are some useful starting ones.
+
+// String.prototype.split()
+
+// The split() method of String values takes a pattern and divides this string into an ordered list of substrings
+// by searching for the pattern, puts these substrings into an array, and returns the array.
+// In other words - the split() method converts a string into an array - this can be useful as we will see later :)
+
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' '); // notice the space between the " "
+console.log(words[3]); // returns "fox"
+
+const chars = str.split(''); // no space between the ""
+console.log(chars[8]); // returns "k"
+
+const strCopy = str.split(); // no ""
+console.log(strCopy); // returns Array ["The quick brown fox jumps over the lazy dog."]
+
+// Array.prototype.reverse()
+
+// The reverse() method of Array instances reverses an array in place and returns the reference to the same array, 
+// the first array element now becoming the last, and the last array element becoming the first.
+// In other words, elements order in the array will be turned towards the direction opposite to that previously stated.
+
+const array1 = ['one', 'two', 'three'];
+console.log('array1:', array1); // returns array1:" ["one", "two", "three"]
+
+const reversed = array1.reverse();
+console.log('reversed:', reversed); // returns reversed: ["three", "two", "one"]
+
+// Careful: reverse is destructive -- it changes the original array.
+console.log('array1:', array1); // returns array1: ["three", "two", "one"]
+
+
+// Array.prototype.join()
+
+// The join() method of Array instances creates and returns a new string by concatenating all of the elements in this array, 
+// separated by commas or a specified separator string. 
+// If the array has only one item, then that item will be returned without using the separator. ;)
+// In other words - join() method converts an Array back to a String ;)
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join()); //  returns "Fire,Air,Water"
+
+console.log(elements.join('')); // returns "FireAirWater"
+
+console.log(elements.join('-')); // returns "Fire-Air-Water"
+
+//******************************************************************//
+
+//! I CHALLENGE YOU!
+
+//******************************************************************//
+
+// Putting it all together
+
+// How can we use these loops and method in a practical setting?
+
+// THE PALINDROME CHALLENGE
+
+// Palindrome: a word, phrase, or sequence that reads the same backwards as forwards, e.g. "madam" or "nurses run"
+
+// Challenge: I want a program that checks if a given STRING is a Palindrome and returns TRUE or FALSE
+
+// FIRST Try completing the challenge with loops and what we have learnt so far in class
+
+// Then try with methods (Can do it with the methods mentioned above)
+
+// Let me know if you get stuck - Seb Z.G
+
+// Here is some starter code
+
+const myWord1 = "I love to Code"
+const myWord2 = "kayak"
+const myWord3 = "TacOcaT"

@@ -296,7 +296,7 @@ if (true)
                                                     // returns "dog"
 
                                                     [] && "dog"
-// returns "dog"
+                                                    // returns "dog"
 
 
 //**************************************************************************//
@@ -448,7 +448,7 @@ let objArr = { "Key": "value", "Pet": "Cat" }
 let stringObj = "I love JavaScript!"
 
 // JavaScript methods are actions or functions that can be performed on objects.
-// We can create are own methods or functions and store them as object properties.
+// We can create our own methods or functions and store them as object properties.
 // But Javascript Objects already come with some built in methods for our convenience
 // There are many but here are some useful starting ones.
 
@@ -524,6 +524,6 @@ console.log(elements.join('-')); // returns "Fire-Air-Water"
 
 // Here is some starter code
 
-let myWord1 = "I love to Code"
-let myWord2 = "kayak"
-let myWord3 = "TacOcaT"
+const myWord1 = "I love to Code"
+const myWord2 = "kayak"
+const myWord3 = "TacOcaT"

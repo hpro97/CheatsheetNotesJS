@@ -546,7 +546,7 @@ console.log(result); // Expected output: "12345"
 
 //*********************************************************************//
 
-//! READY?
+//! READY? intermediate JS incomming
 
 //*********************************************************************//
 
@@ -555,6 +555,27 @@ console.log(result); // Expected output: "12345"
 // In JavaScript we have Objects
 
 // Examples of Objects: 
+
+let people = {
+    name: "harry",  //property is whole statement, key-value pairs are the individual statements
+    age: 26,
+    health: "currently on last legs",
+    nearDeath: true,
+};
+
+//to access property values of a basic information type (string, number, boolean) use dot notation
+
+console.log(people.nearDeath);
+
+//use bracket notation for same effect
+
+console.log(people["age"]);
+
+//you can use dot functions to create object arrays for keys,values and entries
+
+console.log(Object.keys(people)); //logs exclusively keys (name,age,health,nearDeath)
+console.log(Object.values(people)); //logs exclusively values of said keys (harry, 26, currently on last legs, true)
+console.log(Object.entries(people)); //logs entries of said object (name: harry, age: 26, etc)
 
 // Array of Arrays
 
@@ -608,7 +629,7 @@ const planets = [
 
 // *Harry's Handy tips for simple pricks
 // there's individual objects inside the array of planets
-// these objects are an individual object with (a name value of earth, with a moons value of 1.) you could assign this an object called earthInfor for example.
+// these objects are an individual object with (a name value of earth, with a moons value of 1.) you could assign this an object called earthInfo for example.
 // and so forth, until saturn.
 
 // Object of Arrays
@@ -622,6 +643,60 @@ const website = {
 // object is website
 // arrays are users and pages
 // users array contains 3 strings, same as pages
+// these arrays correlate through the index (i.e i[0] of users would be john, whilst the i[0] for pages would be home)
+
+//if you define a variable before hand globally it can be referenced locally
+
+let milks = ["prostate", "pregnant elefant", "none"]
+
+let filthMix = {
+    name: 'Warm water with questionable milk',
+    price: 6.5,
+    isIced: true,
+    withSugar: true,
+    milks: milks
+};
+
+let coldBrew = {
+    name: 'Cold Brew',
+    price: 6,
+    withSugar: false
+};
+
+const drinks = [coldBrew, filthMix]
+
+let menu = {
+    drinks: drinks, // referencing our global defined drinks const
+    food: ["toast", "sausages", "hashbrown"], // adding new array inside of our objects array
+    milks: milks
+}
+
+// -------------------------------- bonus ------------------------------//
+
+for (const key in menu) { //first anything we replace for key will work, it's just the name (remember "key" is what we're defining, this would relate to drinks, food and milks)
+
+    console.log("menu." + key // this will take our literal keys (we haven't defined as a variable but this is innate and will know we're refering to whatever we deined as key in our menu)
+    + "= " + menu[key]); // here we are taking the menu object and specifying that we want to display the value (now our key inside of menu) of our menu object
+    // if we just wrote + [key] (instead of menu[key]) it would display our original key drinks, food, milk
+}
+//this will iterate through each key IN our for loop of objects, hence the for...in loop
+
+//a method lives inside of an object so console.log() is a method
+//if it's a function it doesn't live inside of an object, like iterate()
+//knowing this if we wanted to display all the keys inside of coldBrew we could do this
+
+console.log(Object.keys(coldBrew));
+
+//referencing when we discussed keys, values and entries, we could apply this to just give uis the values for example
+
+console.log(object.values(coldBrew));
+
+//template literal has backtick to start and end `` allowing you to not have to open and close literal strings and call functions and operations without opening and closing a string. for example
+
+console.log(`our milks available are ${milks}, why not add one to your ${coldBrew.name}, two would cost you ${coldBrew.price + coldBrew.price}, 3 would be ${coldBrew.price * 3}`);
+
+
+//--------------------------------- END OF LESSON 1 ------------------//
 
 // String Object 
 

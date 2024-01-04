@@ -698,6 +698,110 @@ console.log(`our milks available are ${milks}, why not add one to your ${coldBre
 
 //--------------------------------- END OF LESSON 1 ------------------//
 
+
+//--------------------------------- LESSON 2 FUNCTIONS------------------//
+
+// defining array for example
+var brands = ["Acer", "Apple", "Sony", "Samsung"];
+var heroes = ["Black Panther", "Cyborg", "Black Canary", "Donna Troy", "Huntress", "Blue Beetle", "Captain Atom"];
+
+// function structure
+function print(arr) { //function (what is it) print (our name for the function) arr (what we will be feeding into function, in this case we'll use it for  different arrays, so arr, when in use we'll replace arr with X, or whatever array specifically we are using it for)
+    for (let i = 0; i < arr.length; i++) { //basic for loop happens on array we feed in
+        console.log(arr[i]); //takes the array and states the value of each index in said array (acer, apple, sony, etc {for brands array})
+    }
+    console.log(`--------------`); //console logs ---------- after array
+};
+
+print(brands); //feeds in brands array to function named print and called to run
+print(heroes)
+
+//function declarations is declared directly after function
+
+function declareHello() { //notice in this case we left it blank, we're not feeding anything into the function, it's doing something self contained
+console.log(`Hiya, i'm a function declaration`);
+};
+
+//function expression is contained in something for example a variable, we can still call them to run
+
+let expressHello = function() { //let defined as a function
+    console.log(`Hiya, i'm a function expression`);
+};
+
+//remember to call to run
+
+expressHello();
+
+function returnValue() { //declare function
+    var result = 2 + 3; //define a variable locally (inside function) in this case containing an equation
+    return result; //return will stop the function and store the data
+};
+
+console.log(returnValue()); // will log 5
+
+var value5 = returnValue() //uses function to declare var value
+console.log(value5); //logs var
+
+// you could stop a function with return for an if statement as a handy example
+
+function checkBool() { //defining function name only
+    let x = false; //declaring internal variable as false
+    if (x === true) { //if statement
+        console.log(`we stopped the function`);//logs if the if statement was truthy, (in this case it wasn't so will not display console log)
+        return; //return doesn't happen because if statement was not met
+        console.log(`this code does nothing`);//does nothing because after return
+    }else{
+    console.log(`the function happened because x is not true`);
+    }
+};
+
+let additionResult = returnValue(); //define our variable to store output of function
+console.log(`this should give us 5, drum roll please..... ${additionResult}`); //logs the output stored from variable after executing the function
+
+checkBool(); //nothing prints because if statement was not met
+
+var width = 10; //defining var globally outside of function
+var height = 10;
+function areaCalc(width, height){//what variables are we feeding in
+    let area = 0; //define initial var
+    area = (width * height); //this makes our var update to what we feed into function * the other
+return area;} //returns a value of var
+
+console.log(areaCalc(width,height)); //console logs function applied on width and height variables (10 * 10) so function value will be 100 in this case, and log will print 100
+
+function myValuesAre(x,y,z) { //these are parameters we're naming to give the function
+console.log(`my values are ${x} ${y} ${z}`); //takes parrameters
+return;//return stores the value and makes happen 
+}
+
+//declaring vars for use on function, these are globally defined and can be used in any function, if locally defined then they are only used inside the function and not stored outside, such as "let area = 0" on line 767
+var me1 = "me1";
+var number2 = 2;
+var trueStatement = true;
+
+//feeding in these vars
+myValuesAre(me1, number2, trueStatement);
+//x is now a copy of me1, y is copy of number2, etc exlcusively for functions use, not outside of function
+
+//feeding in directly no vars
+myValuesAre(7, "hello", false)
+//note these are now assigned to var x,y,z. exlcusively for functions use, not outside of function
+
+function add(x) { //takes a number we will feed it when it runs
+    if (x < 10) {
+        console.log(x + 1);
+    } else {
+        console.log(x - 3);
+    }
+    return;
+}
+
+add(7); //will log 8 due to our if statement
+
+
+//-------------- END OF LESSON 2 FUNCTIONS (up to and including 05-02-06)------//
+
+
 // String Object 
 
 const sTxt = "This is a test string"; //we're assigning a string value to an object

@@ -801,22 +801,220 @@ add(7); //will log 8 due to our if statement
 
 //-------------- END OF LESSON 2 FUNCTIONS (up to and including 05-02-06)------//
 
+//----------------------- Lesson 3 + 4  ----------------------------//
+
+//reference local and globally defined for first part of this lesson
+//defining outside of function is global, inside is local
+//you can call global variables and such from inside funcitons but not viceversa
+
+var say2 = 2;
+
+function say2() {
+    console.log(say2);
+};
+
+//you can define things inside of functions but only local use
+
+function say3() {
+    var say3 = 3;
+    console.log(say3);
+};
+
+// The default keyword "this" refers to the global object
+// In a browser, the global object is the Window 
+
+var planet = {
+    name: "Earth",
+    moons: 1,
+    // Objects can store arrays in a key-value pair
+    neighboringPlanets: ["Mars", "Venus"],
+    // Objects can also store methods
+    tellFunFact: function () {
+      console.log("The earth is the only planet in our solar system not named after a Roman god or goddess.");
+    },
+    logMoons: function () {
+        console.log(`earth has ${this.moons} many moons`); //inside of objects this will refer to what you're refering to's parent
+    }
+};
+// To access a value in an array, use the name of the object, the key and the index. reference lines 566 for use of dot and bracket notation
+
+console.log(planet.neighboringPlanets[0]);
+
+// To call a method, use the name of the object and the key. Don't forget the ()!
+planet.tellFunFact();
+
+//more examples of "this" with a rundown of functionality in the code
+
+console.log(this); //logs window, this used globally refers to window in browser
+
+var child = { //defining variable called child
+  age: 10, // defining and object inside of variable with a value of 10
+  ageTenYears: function () { //object containing function
+    console.log(this.age + 10); //this function logs this (in this case variable child).age + 10, so 20 if you were to run this function
+  },//closes function
+};//closes variable
+
+var investor = { //defining variable
+  name: 'Cash Saver', //objects inside variable with value of string "Cash Saver"
+  investment: { //object inside variabler opening up other sub ojects contained here
+    investmentGrowth: function () { //sub object var investor/investment/investmentGrowth containing a function
+      console.log(this.initialInvestment * 1.15); //inside this function it logs  this as (what contains this variable contianing a function, in this case investment with a suboject class of initialInvestment) in other words the value of 5000, and multiplies it by 1.15 to store the value as what is printed inside the console log function when this function is called
+    },//closes function
+  },//closes investment sub object
+};//closes investor variable
+
+var comparisonOperators = ["Equal", "Not Equal", "Strict Equal", "Strict Not Equal", "Greater Than", "Less Than"];
+var arithmaticOperators = ["+", "-", "%"];
+var logicalOperators = ["and", "or", "not"];
+var myString = "Hello String";
+
+//Array Methods
+// Sorts comparisonOperators array and returns the sorted array
+comparisonOperators.sort(); //alphabetical overwrites as new array in var
+
+arithmaticOperators.push("%"); //push adds to end of array and overwrites
+
+var logicalOperatorsSliced = logicalOperators.slice(0,2); //slices index starting at 0 and ends at 2 (before start 2), so only displays 0+1, doesn't change original array
+
+//String Methods
+//Replaces "String" with "World" and returns new string
+var myNewString = myString.replace("String", "World"); //searches for defined in [0] and replaces with new in [1], doesn't change original
+
+var constellations = ["Orion", "Scorpius", "Lyra", "Ursa Major", "Ursa Minor"];
+var planets = ["Earth", "Saturn", "Mars", "Jupiter", "Uranus", "Venus"];
+var star = "polaris";
+
+constellations.unshift("Canis Major");
+//adds at beginning of array and overwrites
+
+planets.slice(0,5)
+//cutts out index 0-5 (not including 5)
+
+var galaxy = constellations.concat(planets);
+//concat joins multiple arrays together and stores in new array, doesn't overwrite
+
+var starCap = star.replace("polaris", "POLARIS");
+//self explanatory, replaces 
+
+
+var numbers = [1, 2, 3, 4]
+
+numbers.forEach(lessThanThree)//for each will apply on each object of an array, often used in conjuction with a funciuton.
+
+function lessThanThree(i) {
+  if (i < 3) {
+    console.log(i.toString() + ' is less than 3');
+  } else {
+    console.log(i.toString() + ' is NOT less than 3');
+  }
+}
+
+var originalArray = [1, 3, 2, 5, 10]; //defined array into variable
+
+// doubledArray is equal to a new array of numbers multiplied by 2 and returned by map(). map() will use an anonymous function as a condition. 
+
+var doubledArray = originalArray.map(function(data) { //defining a variable and assigning an (array to the map function {which creates a new array calling the following function to be applied to every element of the array} and the function applied to all of this is fed in what we've defined at "data"). In other words we've defined the data type we're feeding into a function, then applying that function to an already specified array and using tthe map function to make sure we apply it to every element in said array using the map function, with a final step of creating everything we've eapplied on the OG array into a new array, stored as a variable called doubleArray
+  
+  // The anonymous function returns each number multiplied by 2. The returned result is added to a new array.
+
+  return data * 2; //the data that is returned (and coincidentally the actual use of our function) is whatever we've feeded into the function {(OG array) *2}
+});
+
+var oddOrEven = originalArray.map(function(num) { //we've defined a variable called oddOrEven, to that variable we've assigned a process that does this (whatever we're doing will be assigned with map function to a new array called oddOrEven, taking information from our OG array, then to that object we're creating will be subjected to a function that we'll feed in numbers as the data type. in said function we're applying will be and if statement described below)
+    if (num % 2 === 0) {//each individual number fed into our function from the OG array will be tested to see if it has a remainder when divided by two, if said remainder is 0 (in other words, the data is even)
+      return 'even'//then we return a string called even
+    } else {//otherwise
+      return 'odd'//we return a string called odd
+    }
+  });
+  
+  //our oddOrEven var will be:
+  
+  // var oddOrEven = ["odd", "odd", "even", "odd", "even"]
+  
+
+
+  var numbers = [2, 4, 6, 8, 10, 12];
+
+  var planets = [
+    {
+        name: 'Earth',
+        moons: 1
+    },
+    {
+        name: 'Mars',
+        moons: 2
+    },
+    {
+        name: 'Jupiter',
+        moons: 79
+    },
+    {
+        name: 'Saturn',
+        moons: 82
+    }
+  ];
+  
+  // Filtering Methods
+  
+  // Find
+  console.log(numbers.find(function(i) {
+    return i > 10 
+  }))
+  
+  //starting from end (reverse engineering and run through)
+  //return i > 10 looks at number we're feeding into the function and decides if it is greater than 10
+  //(i) is a value we're defining for use inside of our function, it applies to the number we're feeding into the function and the function itself replaces i with our number that we're feeding in.
+  //(function) encapsulates everything we've looked at so far in this definition. it's a callback function
+  //.find is a method that lets us take the array i'm about to mention and it allows you to search for a specific element in said array, applying a condition we define inside our function, in this case >10
+  //numbers is our array we're applying to our method find (with set parameters stating only return if our number is greater than 10)
+  //all this will take our numbers array, find the first number greater than ten such as stated in our function. return a value of 12 after iterating the whole array and only finding the final entry [5] index with a value of 12.
+  //console log will print the returned value of 12
+  //.find is a method that lets us take the array i'm about to mention and it allows you to search for a specific element in said array, applying a condition we define inside our function, in this case >10
+  
+  //read this beginning to end to check you understood it
+  
+  console.log(planets.find(function(i) {
+    return i.moons > 10
+  }))
+  
+  //applies same logic onto planets array, specifically looking at what value we have stored for number of moons on each object in array
+  //will return jupiter because it's the first object in the array that meets our criteria beacuse it has 72 moons, the previous objects have less than ten
+  
+  // Filter
+  console.log(numbers.filter(function(i) {
+    return i >= 10
+  }))
+  
+  //The filter() method creates a new array filled with elements that pass a test provided by a function.
+  //takes our numbers, applies similar logic similar to previously stated in .find but instead gathers all the entries from the array that meet our criteria (in this case 10 and 12), makes them into a temporary array that isn't stored and applies consol.log to display that array of those 2 entries, without storing them permanently
+  
+  console.log(planets.filter(function(i) {
+    return i.moons > 10
+  }))
+  
+  //applies same logic as previously stated and returns jupiter and saturn instead of just the first one like in .find, because we're using .filter
+  
+
+//---------------------------- end of unit ---------------------- //
+
+//---------------------------------- bonus -----------------------//
 
 // String Object 
 
-const sTxt = "This is a test string"; //we're assigning a string value to an object
-const ssTxt = sTxt.substring(0,4); //this takes "this" from our string and assigns it to ssTxt
+const sTxt = "That is a test string"; //we're assigning a string value to an object
+const ssTxt = sTxt.substring(0,4); //this takes "that" from our string and assigns it to ssTxt
 
-console.log(ssTxt); // will read "this"
+console.log(ssTxt); // will read "that"
 // The JavaScript engine converts the variable to an object, calls the method (substring()), and then reconverts the object back to a primitive variable.
 
 // *Harry's Handy tips for simple pricks
-// this means it takes our ssTxt with a value of "This" and makes it it's own variable assigned a string value of "This"
+// this means it takes our ssTxt with a value of "That" and makes it it's own variable assigned a string value of "That"
 
 // JavaScript methods are actions or functions that can be performed on objects.
 
 // *Harry's Handy tips for simple pricks
-// Just like we did a seccy ago with our substring that now has a value of "This"
+// Just like we did a seccy ago with our substring that now has a value of "That"
 
 // We can create our own methods or functions and store them as object properties.
 
